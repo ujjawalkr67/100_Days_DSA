@@ -4,16 +4,16 @@ using namespace std;
 int main (){
 int a[5]={1,4,2,7,4};
 
+map<int,int>mpp;
 //precompute hash
-int hassh[12]={0};
 for(int i=0;i<5;i++)
 {
-    hassh[a[i]] += 1;
+    mpp[a[i]]++;
 }
 
-for(int i=0;i<5;i++)
+for(auto it:mpp)
 {
-    cout << a[i]<<" "<<hassh[a[i]]<<endl;;
+    cout<<it.first<<" "<<it.second<<endl;
 }
 
 }
